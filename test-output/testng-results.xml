@@ -1,69 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-08T01:06:23 IST" name="Default suite" finished-at="2026-01-08T01:07:04 IST" duration-ms="40415">
+  <suite started-at="2026-01-08T08:32:21 IST" name="Default suite" finished-at="2026-01-08T08:32:40 IST" duration-ms="19152">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@55fe41ea]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-08T01:06:23 IST" name="Default test" finished-at="2026-01-08T01:07:04 IST" duration-ms="40415">
+    <test started-at="2026-01-08T08:32:21 IST" name="Default test" finished-at="2026-01-08T08:32:40 IST" duration-ms="19152">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T01:06:23 IST" name="setUpClass" finished-at="2026-01-08T01:06:25 IST" duration-ms="1175" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T08:32:21 IST" name="setUpClass" finished-at="2026-01-08T08:32:22 IST" duration-ms="1123" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5527b211]]>
+                <![CDATA[org.testng.TestRunner@2776015d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T01:06:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-08T01:07:04 IST" duration-ms="39098" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T08:32:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-08T08:32:32 IST" duration-ms="9940" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Enter the register details"]]>
+                <![CDATA["Login with valid creds"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["RegisterPage Feature"]]>
+                <![CDATA["testing the login feature"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='page registration-result-page']//div/div[@class='result'] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\santhosh\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59115}, goog:processID: 28140, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59115/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c0f2c997cdb4dd6ad0be25104b18de4]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='page registration-result-page']//div/div[@class='result'] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\santhosh\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59115}, goog:processID: 28140, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59115/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8c0f2c997cdb4dd6ad0be25104b18de4
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at base.BaseClass.checkVisibility(BaseClass.java:55)
-at pages.RegisterPageTest.waitToElementVisible(RegisterPageTest.java:83)
-at pages.RegisterPageTest.registerFormActions(RegisterPageTest.java:110)
-at stepDefinitions.RegiserPageStepDefins.user_enters_all_the_register_page_details(RegiserPageStepDefins.java:32)
-at ✽.user enters all the register page details "santhosh" "kumar" "priy.santh@gmail.com" "Saibaba1@3" "Saibaba1@3"(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T01:07:04 IST" name="tearDownClass" finished-at="2026-01-08T01:07:04 IST" duration-ms="56" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T08:32:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-08T08:32:40 IST" duration-ms="7838" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with Invalid creds"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["testing the login feature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@55fe41ea]" started-at="2026-01-08T08:32:40 IST" name="tearDownClass" finished-at="2026-01-08T08:32:40 IST" duration-ms="130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

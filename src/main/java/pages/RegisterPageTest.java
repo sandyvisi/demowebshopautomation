@@ -19,9 +19,10 @@ public class RegisterPageTest extends BaseClass {
 	private By registerButtonLocator = By
 			.xpath("//div[@class='page-body']//div[@class='buttons']/input[@id='register-button']");
 
-	private By successMessage = By.xpath("//div[@class='page registration-result-page']//div/div[@class='result']");
+	private By successMessageLocator = By
+			.xpath("//div[@class='page registration-result-page']//div/div[@class='result']");
 
-	private By failureMessage = By.xpath("//div[@class='message-error']//div/ul/li");
+	private By failureMessageLocator = By.xpath("//div[@class='message-error']//div/ul/li");
 
 	String actualSuccessMessage = null;
 
@@ -80,15 +81,15 @@ public class RegisterPageTest extends BaseClass {
 
 	private void waitToElementVisible(By locator) {
 
-		checkVisibility(successMessage);
+		checkVisibility(successMessageLocator);
 
 	}
 
-//	private void waitToFailureMessage(By locator) {
-//
-//		checkVisibility(failureMessage);
-//
-//	}
+	private void waitToFailureMessage(By locator) {
+
+		checkVisibility(failureMessageLocator);
+
+	}
 
 	private String getMessage(By locator) {
 
@@ -107,18 +108,19 @@ public class RegisterPageTest extends BaseClass {
 		enterPassword(passwordLocator, password);
 		enterConfirmPassword(confirmPasswordLocator, confirmPassword);
 		clickRegisterButton(registerButtonLocator);
-		waitToElementVisible(successMessage);
 
 	}
 
 	public String getSuccessMessage() {
 
-		return actualSuccessMessage = getMessage(successMessage);
+		waitToElementVisible(successMessageLocator);
+		return actualSuccessMessage = getMessage(successMessageLocator);
 	}
 
 	public String getFailureMessage() {
 
-		return actualFailureMessage = getMessage(successMessage);
+		waitToFailureMessage(failureMessageLocator);
+		return actualFailureMessage = getMessage(failureMessageLocator);
 	}
 
 }
