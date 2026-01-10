@@ -17,12 +17,11 @@ public class LoginPageTestDefinitions {
 	public void goToLoginPage() throws IOException {
 		base = new BaseClass();
 		base.init();
-		loginPaege = new LoginPageTest();
-
 	}
 
 	@When("User enters valid the {string} {string}")
 	public void enterEmailAndPassword(String email, String password) {
+		loginPaege = new LoginPageTest();
 		loginPaege.loginFunctions(email, password);
 
 	}

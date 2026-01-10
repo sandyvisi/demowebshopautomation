@@ -3,10 +3,15 @@ package base;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,6 +24,7 @@ public class BaseClass {
 	protected static String propertyFilePath = System.getProperty("user.dir")
 			+ "\\src\\main\\java\\config\\config.properties";
 	protected static WebDriverWait expWait;
+	protected static JavascriptExecutor js;
 
 	public void init() throws IOException {
 
@@ -29,6 +35,7 @@ public class BaseClass {
 		properties.load(fis);
 		driver.get(properties.getProperty("url"));
 		expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		js = (JavascriptExecutor) driver;
 		fis.close();
 
 	}
@@ -59,6 +66,36 @@ public class BaseClass {
 	public String getText(By locator) {
 
 		return driver.findElement(locator).getText();
+	}
+
+	public void scrollIntoView(By locator) {
+
+		WebElement element = driver.findElement(locator);
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+	}
+
+	public void getCurrentUrl() {
+
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println(currentUrl);
+	}
+
+	public void getListElements(String pageUrl) {
+
+		Set<String> setWindows = driver.getWindowHandles();
+		List<String> listWindows = new ArrayList<>(setWindows);
+
+		for (String w : listWindows) {
+
+			driver.switchTo().window(w);
+			if (driver.getCurrentUrl().equals(pageUrl)) {
+				break;
+
+			}
+
+		}
+
 	}
 
 }
