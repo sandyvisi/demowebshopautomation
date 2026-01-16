@@ -1,5 +1,6 @@
 Feature: RegisterPage Feature
 
+
   Scenario Outline: Enter the register details
     Given url to be loaded properly
     When user enters all the register page details "<firstName>" "<lastName>" "<email>" "<password>" "<confirmPassword>"

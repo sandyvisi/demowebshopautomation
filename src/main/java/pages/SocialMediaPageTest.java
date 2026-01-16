@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import base.BaseClass;
 
-public class SocialMediaTest extends BaseClass {
+public class SocialMediaPageTest extends BaseClass {
 
 	private By facebook = By.xpath("//div[@class='column follow-us']//li/a[contains(text(),'Facebook')]");
 	private By twitter = By.xpath("//div[@class='column follow-us']//li/a[contains(text(),'Twitter')]");
@@ -19,7 +19,7 @@ public class SocialMediaTest extends BaseClass {
 		click(youTube);
 		click(googlePlus);
 		click(rss);
-		getListElements(pageUrl);
+		getSpecificWindowFromOpenedWindows(pageUrl);
 	}
 
 }

@@ -19,24 +19,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BaseClass {
 
 	protected static WebDriver driver;
-	protected static Properties properties;
-	protected static FileInputStream fis;
-	protected static String propertyFilePath = System.getProperty("user.dir")
-			+ "\\src\\main\\java\\config\\config.properties";
+	protected Properties properties;
 	protected static WebDriverWait expWait;
+	protected static FileInputStream fis;
+	private static final String PROPERTY_FILE_PATH = System.getProperty("user.dir")
+			+ "/src/main/java/config/config.properties";
 	protected static JavascriptExecutor js;
 
 	public void init() throws IOException {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		properties = new Properties();
-		fis = new FileInputStream(propertyFilePath);
-		properties.load(fis);
-		driver.get(properties.getProperty("url"));
-		expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		js = (JavascriptExecutor) driver;
-		fis.close();
+
+		try {
+			fis = new FileInputStream(PROPERTY_FILE_PATH);
+			properties = new Properties();
+			properties.load(fis);
+			driver.get(properties.getProperty("url"));
+			expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			js = (JavascriptExecutor) driver;
+
+		} catch (IOException i) {
+			i.printStackTrace();
+		} finally {
+			fis.close();
+		}
 
 	}
 
@@ -81,7 +88,7 @@ public class BaseClass {
 		System.out.println(currentUrl);
 	}
 
-	public void getListElements(String pageUrl) {
+	public void getSpecificWindowFromOpenedWindows(String pageUrl) {
 
 		Set<String> setWindows = driver.getWindowHandles();
 		List<String> listWindows = new ArrayList<>(setWindows);
@@ -96,6 +103,18 @@ public class BaseClass {
 
 		}
 
+	}
+
+	public Boolean waitTillTextVisible(By locator, String text) {
+
+		WebElement element = driver.findElement(locator);
+		return expWait.until(ExpectedConditions.textToBePresentInElement(element, text));
+
+	}
+
+	public void teardown() {
+
+		driver.quit();
 	}
 
 }

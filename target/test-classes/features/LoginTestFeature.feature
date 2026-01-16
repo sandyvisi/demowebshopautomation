@@ -1,7 +1,9 @@
 Feature: testing the login feature
 
+  Background: User has to landed over to the login page
+    Given Get the url and open in browser
+
   Scenario Outline: Login with valid creds
-    Given User has to landed over to the login page
     When User enters valid the "<email>" "<password>"
     Then User able to login successfully
 
@@ -10,7 +12,6 @@ Feature: testing the login feature
       | kumar@sandy.com | Saibaba1@3 |
 
   Scenario Outline: Login with Invalid creds
-    Given User has to landed over to the login page
     When User enters the invalid "<invalidEmail>" "<password>"
     Then User should not be able login
 

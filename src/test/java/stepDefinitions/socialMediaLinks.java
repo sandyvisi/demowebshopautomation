@@ -2,16 +2,16 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.SocialMediaTest;
+import pages.SocialMediaPageTest;
 
 public class socialMediaLinks {
 
-	SocialMediaTest social;
+	SocialMediaPageTest social;
 
 	@When("user clicks the socialMedia link at the bottom of the page")
 	public void user_clicks_the_facebook_link_at_the_bottom_of_the_page() {
 
-		social = new SocialMediaTest();
+		social = new SocialMediaPageTest();
 		social.socialMediaAccess("https://www.facebook.com/nopCommerce");
 
 	}

@@ -14,6 +14,9 @@ public class LoginPageTest extends BaseClass {
 	private By passwordLocator = locator(loginFormLocators, "Password");
 	private By clickReminderMeLocator = locator(loginFormLocators, "RememberMe");
 	private By loginbuttonLocator = By.xpath("//div[@class='form-fields']/form//div/input[@value='Log in']");
+	private By validLoginLink = By.xpath("//ul/li/a[text()='kumar@sandy.com']");
+	private By invalidLoginLink = By
+			.xpath("//div[@class='validation-summary-errors']/span[contains(text(),'Login was')]");
 
 	private void clickLoginPageLink(By locator) {
 
@@ -51,6 +54,18 @@ public class LoginPageTest extends BaseClass {
 		enterPassword(passwordLocator, password);
 		clickReminderCheckBox(clickReminderMeLocator);
 		clickLoginButton(loginbuttonLocator);
+
+	}
+
+	public Boolean checkAssertion(String text) {
+
+		return waitTillTextVisible(validLoginLink, text);
+
+	}
+
+	public Boolean checkAssertion1(String text) {
+
+		return waitTillTextVisible(invalidLoginLink, text);
 
 	}
 
