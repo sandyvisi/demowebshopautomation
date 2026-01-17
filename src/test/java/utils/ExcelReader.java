@@ -1,6 +1,5 @@
 package utils;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -44,7 +43,7 @@ public class ExcelReader {
 
 		numberOfRows = sheet.getPhysicalNumberOfRows();
 		numberOfColumns = sheet.getRow(0).getPhysicalNumberOfCells();
-		
+
 		System.out.println("Rows: " + numberOfRows);
 		System.out.println("Columns: " + numberOfColumns);
 

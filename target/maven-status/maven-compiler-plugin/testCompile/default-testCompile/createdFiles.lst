@@ -1,0 +1,6 @@
+stepDefinitions\socialMediaLinks.class
+utils\ExcelReader.class
+runners\TestRunner.class
+stepDefinitions\RegiserPageStepDefins.class
+hooks\Hooks.class
+stepDefinitions\LoginPageTestDefinitions.class

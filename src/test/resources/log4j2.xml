@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %c{1} - %msg%n
+        </Property>
+        <Property name="LOG_PATH">logs</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- Console Output -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <!-- File Output -->
+        <RollingFile name="FileAppender"
+                     fileName="${LOG_PATH}/automation.log"
+                     filePattern="${LOG_PATH}/automation-%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+            <DefaultRolloverStrategy max="7"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Reduce Selenium noise -->
+        <Logger name="org.openqa.selenium" level="WARN" />
+        <Logger name="io.cucumber" level="WARN" />
+
+        <!-- Framework Logs -->
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

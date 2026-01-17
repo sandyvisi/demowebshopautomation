@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 
 import base.BaseClass;
@@ -9,14 +10,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPageTest;
+import utils.LoggerUtil;
 
 public class LoginPageTestDefinitions {
+
+	private static final Logger logger = LoggerUtil.getLogger(LoginPageTestDefinitions.class);
 
 	LoginPageTest loginPaege;
 
 	@Given("Get the url and open in browser")
 	public void get_the_url_and_open_in_browser() throws IOException {
 
+		logger.info("Opening application URL");
 		loginPaege = new LoginPageTest();
 	}
 
@@ -31,6 +36,8 @@ public class LoginPageTestDefinitions {
 
 	@Then("User able to login successfully")
 	public void userLoggedInSuccessfully() {
+		logger.info("Login successful - dashboard displayed");
+
 		System.out.println("user logged in successfully");
 
 	}
