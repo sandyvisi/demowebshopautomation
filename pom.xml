@@ -16,18 +16,22 @@
 					<source>21</source>
 					<target>21</target>
 				</configuration>
-			</plugin>		
+			</plugin>
 
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.4</version>
-				<configuration>
-					<includes>
-						<include>**/*TestRunner.java</include>
-					</includes>
-				</configuration>
-			</plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.5.4</version>
+    <configuration>
+        <includes>
+            <include>**/*TestRunner.java</include>
+        </includes>
+        <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar"
+        </argLine>
+    </configuration>
+</plugin>
+
 
 		</plugins>
 	</build>
@@ -82,5 +86,23 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
 		</dependency>
+
+		<!-- Allure Cucumber 7 -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>2.25.0</version>
+</dependency>
+
+
+		<!-- AspectJ (required for @Step annotations) -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.21</version>
+</dependency>
+
+
+
 	</dependencies>
 </project>
