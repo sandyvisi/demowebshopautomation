@@ -13,23 +13,15 @@ import pages.RegisterPageTest;
 
 public class RegiserPageStepDefins {
 
-	BaseClass base;
 	RegisterPageTest registerPageSteps;
 	String expectedSuccMessage = "Your registration completed";
 	String expectedFailMessage = "The specified email already exists";
-
-	@Given("url to be loaded properly")
-	public void usrLoaded() throws IOException {
-		base = new BaseClass();
-		base.init();
-		registerPageSteps = new RegisterPageTest();
-
-	}
 
 	@When("user enters all the register page details {string} {string} {string} {string} {string}")
 	public void enterRegisterDetails(String firstName, String lastName, String email, String password,
 			String confirmPassword) {
 
+		registerPageSteps = new RegisterPageTest();
 		registerPageSteps.registerFormActions(firstName, lastName, email, password, confirmPassword);
 
 	}

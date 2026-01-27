@@ -1,5 +1,7 @@
 Feature: RegisterPage Feature
 
+Background: User has to landed over to the login page
+    Given Get the url and open in browser
 
   Scenario Outline: Enter the register details
     Given url to be loaded properly

@@ -10,7 +10,7 @@ public class Hooks extends BaseClass {
 
 	@Before
 	public void setUp() throws IOException {
-		init(); // ✅ driver + wait initialized ONCE
+		init("edge"); // ✅ driver + wait initialized ONCE
 	}
 
 	@After

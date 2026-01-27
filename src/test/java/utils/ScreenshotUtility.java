@@ -1,6 +1,7 @@
 package utils;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtility {
 
-	public static String getScreenshot(WebDriver driver, String screenshotName) {
+	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 		String screenshotDirectory = System.getProperty("user.dir") + "/Screenshots";
 		String filePath = screenshotDirectory + "/" + screenshotName + "_" + timestamp + ".png";
@@ -24,7 +25,7 @@ public class ScreenshotUtility {
 			File destinationFile = new File(filePath);
 			FileUtils.copyFile(sourceFile, destinationFile);
 			System.out.println("Screenshot saved at: " + filePath);
-		} catch (IOException i) {
+		} catch (FileNotFoundException i) {
 			i.printStackTrace();
 		} finally {
 

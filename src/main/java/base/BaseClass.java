@@ -13,6 +13,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,9 +28,16 @@ public class BaseClass {
 			+ "/src/main/java/config/config.properties";
 	protected static JavascriptExecutor js;
 
-	public void init() throws IOException {
+	public void init(String browser) throws IOException {
 
-		driver = new ChromeDriver();
+		if (browser.equals("chrome")) {
+			driver = new ChromeDriver();
+		} else if (browser.equals("edge")) {
+			driver = new EdgeDriver();
+		} else if (browser.equals("firefox")) {
+			driver = new FirefoxDriver();
+		}
+
 		driver.manage().window().maximize();
 
 		try {
@@ -64,6 +73,12 @@ public class BaseClass {
 
 	}
 
+	public List<WebElement> getElements(By locator) {
+
+		return driver.findElements(locator);
+
+	}
+
 	public void checkVisibility(By locator) {
 
 		expWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -88,6 +103,13 @@ public class BaseClass {
 		System.out.println(currentUrl);
 	}
 
+	public static WebElement visible(WebDriver driver, By locator) {
+
+		expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		return expWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+	}
+
 	public void getSpecificWindowFromOpenedWindows(String pageUrl) {
 
 		Set<String> setWindows = driver.getWindowHandles();
@@ -105,7 +127,7 @@ public class BaseClass {
 
 	}
 
-	public Boolean waitTillTextVisible(By locator, String text) {
+	public Boolean textToBePresentInElement(By locator, String text) {
 
 		WebElement element = driver.findElement(locator);
 		return expWait.until(ExpectedConditions.textToBePresentInElement(element, text));

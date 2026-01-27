@@ -22,12 +22,13 @@ public class LoginPageTestDefinitions {
 	public void get_the_url_and_open_in_browser() throws IOException {
 
 		logger.info("Opening application URL");
-		loginPaege = new LoginPageTest();
+
 	}
 
 	@When("User enters valid the {string} {string}")
 	public void enterEmailAndPassword(String email, String password) {
 
+		loginPaege = new LoginPageTest();
 		loginPaege.loginFunctions(email, password);
 		Boolean b = loginPaege.checkAssertion("kumar@sandy.com");
 		Assert.assertEquals(b, true);

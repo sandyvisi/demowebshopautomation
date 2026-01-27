@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="3" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-17T14:26:24 IST" name="Default suite" finished-at="2026-01-17T14:26:55 IST" duration-ms="30779">
+  <suite started-at="2026-01-26T13:45:35 IST" name="Default suite" finished-at="2026-01-26T13:48:33 IST" duration-ms="178117">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@a5b0b86]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-17T14:26:24 IST" name="Default test" finished-at="2026-01-17T14:26:55 IST" duration-ms="30779">
+    <test started-at="2026-01-26T13:45:35 IST" name="Default test" finished-at="2026-01-26T13:48:33 IST" duration-ms="178117">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@a5b0b86]" started-at="2026-01-17T14:26:24 IST" name="setUpClass" finished-at="2026-01-17T14:26:26 IST" duration-ms="2058" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:45:35 IST" name="setUpClass" finished-at="2026-01-26T13:45:37 IST" duration-ms="2052" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7d61468c]]>
+                <![CDATA[org.testng.TestRunner@5aa5b3af]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@a5b0b86]" started-at="2026-01-17T14:26:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-17T14:26:45 IST" duration-ms="18864" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:45:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:47:43 IST" duration-ms="125735" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Checking the broken links login page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Broken link present or not"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:47:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:47:51 IST" duration-ms="7846" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@a5b0b86]" started-at="2026-01-17T14:26:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-17T14:26:55 IST" duration-ms="9659" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:47:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:47:58 IST" duration-ms="7147" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +69,133 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@a5b0b86]" started-at="2026-01-17T14:26:55 IST" name="tearDownClass" finished-at="2026-01-17T14:26:55 IST" duration-ms="8" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:47:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:48:04 IST" duration-ms="6243" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter the register details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RegisterPage Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'url to be loaded properly' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("url to be loaded properly")
+public void url_to_be_loaded_properly() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'url to be loaded properly' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("url to be loaded properly")
+public void url_to_be_loaded_properly() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:48:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:48:11 IST" duration-ms="6696" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter the register with duplicate email details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["RegisterPage Feature"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'url to be loaded properly' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("url to be loaded properly")
+public void url_to_be_loaded_properly() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'url to be loaded properly' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("url to be loaded properly")
+public void url_to_be_loaded_properly() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:48:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:48:33 IST" duration-ms="22238" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["check that the facebook is loading properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing the tied facebook function"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'User has to landed over to the login page' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User has to landed over to the login page")
+public void user_has_to_landed_over_to_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'User has to landed over to the login page' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User has to landed over to the login page")
+public void user_has_to_landed_over_to_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.User has to landed over to the login page(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/SocialMedia.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:48:33 IST" name="tearDownClass" finished-at="2026-01-26T13:48:33 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

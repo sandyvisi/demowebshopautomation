@@ -59,13 +59,13 @@ public class LoginPageTest extends BaseClass {
 
 	public Boolean checkAssertion(String text) {
 
-		return waitTillTextVisible(validLoginLink, text);
+		return textToBePresentInElement(validLoginLink, text);
 
 	}
 
 	public Boolean checkAssertion1(String text) {
 
-		return waitTillTextVisible(invalidLoginLink, text);
+		return textToBePresentInElement(invalidLoginLink, text);
 
 	}
 

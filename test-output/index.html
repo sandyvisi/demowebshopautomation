@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\santhosh\AppData\Local\Temp\testng-eclipse--1992428986\testng-customsuite.xml</span>
+                    <span>C:\Users\santhosh\AppData\Local\Temp\testng-eclipse--1933883583\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Enter the register details&quot;, &quot;RegisterPage Feature&quot;)">runScenario("Enter the register details", "RegisterPage Feature")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;check that the facebook is loading properly&quot;, &quot;Testing the tied facebook function&quot;)">runScenario("check that the facebook is loading properly", "Testing the tied facebook function")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Enter the register with duplicate email details&quot;, &quot;RegisterPage Feature&quot;)">runScenario("Enter the register with duplicate email details", "RegisterPage Feature")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +127,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with Invalid creds&quot;, &quot;testing the login feature&quot;)">runScenario("Login with Invalid creds", "testing the login feature")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with valid creds&quot;, &quot;testing the login feature&quot;)">runScenario("Login with valid creds", "testing the login feature")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with Invalid creds&quot;, &quot;testing the login feature&quot;)">runScenario("Login with Invalid creds", "testing the login feature")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Checking the broken links login page&quot;, &quot;Broken link present or not&quot;)">runScenario("Checking the broken links login page", "Broken link present or not")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -123,12 +152,96 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Enter the register details&quot;, &quot;RegisterPage Feature&quot;)">
+                  </a> <!-- runScenario("Enter the register details", "RegisterPage Feature") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Enter the register details","RegisterPage Feature")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;url to be loaded properly&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;url to be loaded properly&quot;)
+public void url_to_be_loaded_properly() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:5)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;check that the facebook is loading properly&quot;, &quot;Testing the tied facebook function&quot;)">
+                  </a> <!-- runScenario("check that the facebook is loading properly", "Testing the tied facebook function") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("check that the facebook is loading properly","Testing the tied facebook function")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;User has to landed over to the login page&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;User has to landed over to the login page&quot;)
+public void user_has_to_landed_over_to_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.User has to landed over to the login page(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/SocialMedia.feature:4)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Enter the register with duplicate email details&quot;, &quot;RegisterPage Feature&quot;)">
+                  </a> <!-- runScenario("Enter the register with duplicate email details", "RegisterPage Feature") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Enter the register with duplicate email details","RegisterPage Feature")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;url to be loaded properly&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;url to be loaded properly&quot;)
+public void url_to_be_loaded_properly() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:14)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">runners.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login with Invalid creds&quot;, &quot;testing the login feature&quot;)">
+                  </a> <!-- runScenario("Login with Invalid creds", "testing the login feature") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login with Invalid creds","testing the login feature")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Login with valid creds&quot;, &quot;testing the login feature&quot;)">
@@ -141,10 +254,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login with Invalid creds&quot;, &quot;testing the login feature&quot;)">
-                  </a> <!-- runScenario("Login with Invalid creds", "testing the login feature") -->
+                  <a name="runScenario(&quot;Checking the broken links login page&quot;, &quot;Broken link present or not&quot;)">
+                  </a> <!-- runScenario("Checking the broken links login page", "Broken link present or not") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login with Invalid creds","testing the login feature")</span>
+                  <span class="parameters">("Checking the broken links login page","Broken link present or not")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -154,7 +267,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\santhosh\AppData\Local\Temp\testng-eclipse--1992428986\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\santhosh\AppData\Local\Temp\testng-eclipse--1933883583\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,20 +324,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.TestRunner')
-data.setCell(0, 3, 18864);
+data.setCell(0, 3, 125735);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runners.TestRunner')
-data.setCell(1, 3, 9659);
+data.setCell(1, 3, 22238);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runners.TestRunner')
+data.setCell(2, 3, 7846);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runners.TestRunner')
+data.setCell(3, 3, 7147);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runners.TestRunner')
+data.setCell(4, 3, 6696);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runners.TestRunner')
+data.setCell(5, 3, 6243);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -252,20 +381,42 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@7d61468c)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5aa5b3af)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("Checking the broken links login page", "Broken link present or not")</span>
+                <span class="method-start">2095 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">runScenario("Login with valid creds", "testing the login feature")</span>
-                <span class="method-start">2099 ms</span>
+                <span class="method-start">127848 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login with Invalid creds", "testing the login feature")</span>
-                <span class="method-start">20975 ms</span>
+                <span class="method-start">135697 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Enter the register details", "RegisterPage Feature")</span>
+                <span class="method-start">142845 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Enter the register with duplicate email details", "RegisterPage Feature")</span>
+                <span class="method-start">149092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("check that the facebook is loading properly", "Testing the tied facebook function")</span>
+                <span class="method-start">155791 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">30644 ms</span>
+                <span class="method-start">178035 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
