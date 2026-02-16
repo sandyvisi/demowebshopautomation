@@ -18,125 +18,118 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 
-	protected static WebDriver driver;
+	protected static WebDriver driver; // now instance variable
 	protected Properties properties;
-	protected static WebDriverWait expWait;
-	protected static FileInputStream fis;
-	private static final String PROPERTY_FILE_PATH = System.getProperty("user.dir")
+	protected WebDriverWait expWait;
+	protected FileInputStream fis;
+	protected static final String PROPERTY_FILE_PATH = System.getProperty("user.dir")
 			+ "/src/main/java/config/config.properties";
-	protected static JavascriptExecutor js;
+	protected JavascriptExecutor js;
 
+	// 1️⃣ Initialize driver
 	public void init(String browser) throws IOException {
 
-		if (browser.equals("chrome")) {
+		if ("chrome".equalsIgnoreCase(browser)) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browser.equals("edge")) {
+
+		} else if ("edge".equalsIgnoreCase(browser)) {
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browser.equals("firefox")) {
+
+		} else if ("firefox".equalsIgnoreCase(browser)) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+
 		}
 
 		driver.manage().window().maximize();
+
+		js = (JavascriptExecutor) driver;
 
 		try {
 			fis = new FileInputStream(PROPERTY_FILE_PATH);
 			properties = new Properties();
 			properties.load(fis);
 			driver.get(properties.getProperty("url"));
-			expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
-			js = (JavascriptExecutor) driver;
-
-		} catch (IOException i) {
-			i.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		} finally {
-			fis.close();
+			if (fis != null)
+				fis.close();
 		}
-
 	}
 
+	// 2️⃣ Getter for listener to access driver
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	// 3️⃣ Selenium wrapper methods
 	public void click(By locator) {
-
 		driver.findElement(locator).click();
-
 	}
 
 	public void sendValues(By locator, String text) {
-
 		driver.findElement(locator).sendKeys(text);
-
 	}
 
 	public By locator(String xpath, String specifier) {
 		return By.xpath(String.format(xpath, specifier));
-
 	}
 
 	public List<WebElement> getElements(By locator) {
-
 		return driver.findElements(locator);
-
 	}
 
-	public void checkVisibility(By locator) {
+	public void checkVisibility(By locator, WebDriver driver) {
 
+		expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		expWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
 	}
 
 	public String getText(By locator) {
-
 		return driver.findElement(locator).getText();
 	}
 
 	public void scrollIntoView(By locator) {
-
 		WebElement element = driver.findElement(locator);
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
-
 	}
 
 	public void getCurrentUrl() {
-
-		String currentUrl = driver.getCurrentUrl();
-		System.out.println(currentUrl);
+		System.out.println(driver.getCurrentUrl());
 	}
 
-	public static WebElement visible(WebDriver driver, By locator) {
-
-		expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	public WebElement visible(By locator) {
 		return expWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
 	}
 
 	public void getSpecificWindowFromOpenedWindows(String pageUrl) {
-
 		Set<String> setWindows = driver.getWindowHandles();
 		List<String> listWindows = new ArrayList<>(setWindows);
 
 		for (String w : listWindows) {
-
 			driver.switchTo().window(w);
 			if (driver.getCurrentUrl().equals(pageUrl)) {
 				break;
-
 			}
-
 		}
-
 	}
 
 	public Boolean textToBePresentInElement(By locator, String text) {
-
 		WebElement element = driver.findElement(locator);
 		return expWait.until(ExpectedConditions.textToBePresentInElement(element, text));
-
 	}
 
+	// 4️⃣ Close driver
 	public void teardown() {
-
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
-
 }

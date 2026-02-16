@@ -1,205 +1,403 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="3" failed="3" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-26T13:45:35 IST" name="Default suite" finished-at="2026-01-26T13:48:33 IST" duration-ms="178117">
+  <suite started-at="2026-02-16T09:18:08 IST" name="registerpage suite" finished-at="2026-02-16T09:20:07 IST" duration-ms="119135">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-26T13:45:35 IST" name="Default test" finished-at="2026-01-26T13:48:33 IST" duration-ms="178117">
-      <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:45:35 IST" name="setUpClass" finished-at="2026-01-26T13:45:37 IST" duration-ms="2052" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@5aa5b3af]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2026-02-16T09:18:08 IST" name="registerpage test" finished-at="2026-02-16T09:20:07 IST" duration-ms="119135">
+      <class name="testcases.RegisterPageTestCases">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:11 IST" name="launchBrowser" finished-at="2026-02-16T09:18:20 IST" duration-ms="9781" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:45:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:47:43 IST" duration-ms="125735" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:20 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:24 IST" duration-ms="3725" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Checking the broken links login page"]]>
+                <![CDATA[joseph]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Broken link present or not"]]>
+                <![CDATA[murphy]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m12@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@4]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:47:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:47:51 IST" duration-ms="7846" status="PASS">
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:24 IST" name="quit" finished-at="2026-02-16T09:18:25 IST" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:25 IST" name="launchBrowser" finished-at="2026-02-16T09:18:32 IST" duration-ms="7769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:32 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:36 IST" duration-ms="3302" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with valid creds"]]>
+                <![CDATA[akash]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["testing the login feature"]]>
+                <![CDATA[m12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m13@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@5]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:47:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:47:58 IST" duration-ms="7147" status="PASS">
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:36 IST" name="quit" finished-at="2026-02-16T09:18:36 IST" duration-ms="437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:36 IST" name="launchBrowser" finished-at="2026-02-16T09:18:44 IST" duration-ms="8028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:44 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:48 IST" duration-ms="3428" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with Invalid creds"]]>
+                <![CDATA[moorthy]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["testing the login feature"]]>
+                <![CDATA[m13]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m14@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@6]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:47:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:48:04 IST" duration-ms="6243" status="FAIL">
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:48 IST" name="quit" finished-at="2026-02-16T09:18:48 IST" duration-ms="335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:48 IST" name="launchBrowser" finished-at="2026-02-16T09:18:55 IST" duration-ms="6852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:55 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:58 IST" duration-ms="3120" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Enter the register details"]]>
+                <![CDATA[sanjay]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["RegisterPage Feature"]]>
+                <![CDATA[m14]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m15@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@7]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@7]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'url to be loaded properly' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given("url to be loaded properly")
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'url to be loaded properly' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given("url to be loaded properly")
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:48:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:48:11 IST" duration-ms="6696" status="FAIL">
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:58 IST" name="quit" finished-at="2026-02-16T09:18:58 IST" duration-ms="376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:58 IST" name="launchBrowser" finished-at="2026-02-16T09:19:02 IST" duration-ms="3701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:02 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:10 IST" duration-ms="7748" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Enter the register with duplicate email details"]]>
+                <![CDATA[anand]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["RegisterPage Feature"]]>
+                <![CDATA[m15]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m16@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@8]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@8]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'url to be loaded properly' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given("url to be loaded properly")
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'url to be loaded properly' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given("url to be loaded properly")
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:14)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:48:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-26T13:48:33 IST" duration-ms="22238" status="FAIL">
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:10 IST" name="quit" finished-at="2026-02-16T09:19:10 IST" duration-ms="357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:10 IST" name="launchBrowser" finished-at="2026-02-16T09:19:17 IST" duration-ms="6621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:17 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:20 IST" duration-ms="3267" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["check that the facebook is loading properly"]]>
+                <![CDATA[arasu]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Testing the tied facebook function"]]>
+                <![CDATA[m16]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m17@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@9]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@9]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'User has to landed over to the login page' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given("User has to landed over to the login page")
-public void user_has_to_landed_over_to_the_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'User has to landed over to the login page' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given("User has to landed over to the login page")
-public void user_has_to_landed_over_to_the_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.User has to landed over to the login page(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/SocialMedia.feature:4)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@78fb9a67]" started-at="2026-01-26T13:48:33 IST" name="tearDownClass" finished-at="2026-01-26T13:48:33 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:20 IST" name="quit" finished-at="2026-02-16T09:19:20 IST" duration-ms="530" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- runners.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:20 IST" name="launchBrowser" finished-at="2026-02-16T09:19:28 IST" duration-ms="7151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:28 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:31 IST" duration-ms="3390" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sudarshan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[m17]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m18@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:31 IST" name="quit" finished-at="2026-02-16T09:19:31 IST" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:31 IST" name="launchBrowser" finished-at="2026-02-16T09:19:40 IST" duration-ms="8134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:40 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:43 IST" duration-ms="3512" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kalai]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[m18]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m19@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@11]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@11]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:43 IST" name="quit" finished-at="2026-02-16T09:19:43 IST" duration-ms="346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:43 IST" name="launchBrowser" finished-at="2026-02-16T09:19:51 IST" duration-ms="7125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:51 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:55 IST" duration-ms="4785" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[suganya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[m19]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m20@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@12]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:55 IST" name="quit" finished-at="2026-02-16T09:19:56 IST" duration-ms="718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:56 IST" name="launchBrowser" finished-at="2026-02-16T09:20:02 IST" duration-ms="5900" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:20:02 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:20:05 IST" duration-ms="3370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kavi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[m20]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[m21@g.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Saibaba1@13]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Saibaba1@13]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPageActions -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:20:05 IST" name="quit" finished-at="2026-02-16T09:20:07 IST" duration-ms="1435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- testcases.RegisterPageTestCases -->
+    </test> <!-- registerpage test -->
+  </suite> <!-- registerpage suite -->
 </testng-results>

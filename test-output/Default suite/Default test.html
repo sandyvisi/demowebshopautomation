@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 26 13:45:35 IST 2026</td>
+<td>Started on:</td><td>Fri Feb 13 19:55:52 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>178 seconds (178117 ms)</td>
+<tr><td>Total time:</td><td>38 seconds (38950 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,107 +76,87 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter the register details", "RegisterPage Feature"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;url to be loaded properly&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;url to be loaded properly&quot;)
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1960031025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1960031025'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;url to be loaded properly&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;url to be loaded properly&quot;)
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:5)
+<td title='testcases.RegisterPageTestCases.registerPageActions()'><b>registerPageActions</b><br>Test class: testcases.RegisterPageTestCases</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;page registration-result-page&apos;]//div/div[@class=&apos;result&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\santhosh\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56006}, goog:processID: 15356, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56006/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d42c604bbd3ec120c6b38b920703990
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BaseClass.checkVisibility(BaseClass.java:88)
+	at pages.RegisterPageTest.waitToElementVisible(RegisterPageTest.java:84)
+	at pages.RegisterPageTest.getSuccessMessage(RegisterPageTest.java:116)
+	at testcases.RegisterPageTestCases.registerPageActions(RegisterPageTestCases.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace582702662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace582702662'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;page registration-result-page&apos;]//div/div[@class=&apos;result&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\santhosh\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56006}, goog:processID: 15356, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56006/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d42c604bbd3ec120c6b38b920703990
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BaseClass.checkVisibility(BaseClass.java:88)
+	at pages.RegisterPageTest.waitToElementVisible(RegisterPageTest.java:84)
+	at pages.RegisterPageTest.getSuccessMessage(RegisterPageTest.java:116)
+	at testcases.RegisterPageTestCases.registerPageActions(RegisterPageTestCases.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>6</td>
-<td>runners.TestRunner@78fb9a67</td></tr>
-<tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check that the facebook is loading properly", "Testing the tied facebook function"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User has to landed over to the login page&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;User has to landed over to the login page&quot;)
-public void user_has_to_landed_over_to_the_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.User has to landed over to the login page(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/SocialMedia.feature:4)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1284098442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1284098442'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;User has to landed over to the login page&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;User has to landed over to the login page&quot;)
-public void user_has_to_landed_over_to_the_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.User has to landed over to the login page(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/SocialMedia.feature:4)
-</pre></div></td>
-<td>22</td>
-<td>runners.TestRunner@78fb9a67</td></tr>
-<tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter the register with duplicate email details", "RegisterPage Feature"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;url to be loaded properly&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;url to be loaded properly&quot;)
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:14)
-</pre></div><a href='#' onClick='toggleBox("stack-trace844248821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace844248821'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;url to be loaded properly&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Given(&quot;url to be loaded properly&quot;)
-public void url_to_be_loaded_properly() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.url to be loaded properly(file:///D:/eclipse-workspace/demowebshotautomation/src/test/resources/features/RegisterPageTestFeature.feature:14)
-</pre></div></td>
-<td>6</td>
-<td>runners.TestRunner@78fb9a67</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid creds", "testing the login feature"</td>
-<td></td>
-<td>7</td>
-<td>runners.TestRunner@78fb9a67</td></tr>
-<tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid creds", "testing the login feature"</td>
-<td></td>
-<td>7</td>
-<td>runners.TestRunner@78fb9a67</td></tr>
-<tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Checking the broken links login page", "Broken link present or not"</td>
-<td></td>
-<td>125</td>
-<td>runners.TestRunner@78fb9a67</td></tr>
+<td>32</td>
+<td>testcases.RegisterPageTestCases@6a84a97d</td></tr>
 </table><p>
 </body>
 </html>

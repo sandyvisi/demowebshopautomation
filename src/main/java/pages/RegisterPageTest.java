@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import base.BaseClass;
 
@@ -79,15 +80,15 @@ public class RegisterPageTest extends BaseClass {
 
 	}
 
-	private void waitToElementVisible(By locator) {
+	private void waitToElementVisible(By locator, WebDriver driver) {
 
-		checkVisibility(successMessageLocator);
+		checkVisibility(successMessageLocator, driver);
 
 	}
 
-	private void waitToFailureMessage(By locator) {
+	private void waitToFailureMessage(By locator, WebDriver driver) {
 
-		checkVisibility(failureMessageLocator);
+		checkVisibility(failureMessageLocator, driver);
 
 	}
 
@@ -113,13 +114,13 @@ public class RegisterPageTest extends BaseClass {
 
 	public String getSuccessMessage() {
 
-		waitToElementVisible(successMessageLocator);
+		waitToElementVisible(successMessageLocator, driver);
 		return actualSuccessMessage = getMessage(successMessageLocator);
 	}
 
 	public String getFailureMessage() {
 
-		waitToFailureMessage(failureMessageLocator);
+		waitToFailureMessage(failureMessageLocator, driver);
 		return actualFailureMessage = getMessage(failureMessageLocator);
 	}
 

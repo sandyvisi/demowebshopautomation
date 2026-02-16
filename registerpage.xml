@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="registerpage suite">
+	<listeners>
+		<listener class-name="utils.ExtentReportsManager" />
+	</listeners>
+	<test name="registerpage test">
+		<classes>
+			<class name="testcases.RegisterPageTestCases" />
+		</classes>
+	</test>
+</suite>

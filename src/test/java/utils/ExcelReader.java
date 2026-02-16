@@ -59,7 +59,7 @@ public class ExcelReader {
 				dataFormatter = new DataFormatter();
 				data[i - 1][k] = dataFormatter.formatCellValue(cellValue);
 //				 = sheet.getRow(i + 1).getCell(k).toString();
-				System.out.println(data[i - 1][k]);
+//				System.out.println(data[i - 1][k]);
 			}
 		}
 
