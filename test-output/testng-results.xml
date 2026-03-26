@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-16T09:18:08 IST" name="registerpage suite" finished-at="2026-02-16T09:20:07 IST" duration-ms="119135">
+  <suite started-at="2026-03-26T23:27:40 IST" name="registerpage suite" finished-at="2026-03-26T23:27:56 IST" duration-ms="16009">
     <groups>
     </groups>
-    <test started-at="2026-02-16T09:18:08 IST" name="registerpage test" finished-at="2026-02-16T09:20:07 IST" duration-ms="119135">
+    <test started-at="2026-03-26T23:27:40 IST" name="registerpage test" finished-at="2026-03-26T23:27:56 IST" duration-ms="16009">
       <class name="testcases.RegisterPageTestCases">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:11 IST" name="launchBrowser" finished-at="2026-02-16T09:18:20 IST" duration-ms="9781" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@169e6180]" started-at="2026-03-26T23:27:41 IST" name="launchBrowser" finished-at="2026-03-26T23:27:48 IST" duration-ms="7077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:20 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:24 IST" duration-ms="3725" status="PASS">
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@169e6180]" started-at="2026-03-26T23:27:50 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-03-26T23:27:53 IST" duration-ms="2697" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,7 +25,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[m12@g.com]]>
+                <![CDATA[kuga@g.com]]>
               </value>
             </param>
             <param index="3">
@@ -42,15 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:24 IST" name="quit" finished-at="2026-02-16T09:18:25 IST" duration-ms="442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:25 IST" name="launchBrowser" finished-at="2026-02-16T09:18:32 IST" duration-ms="7769" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:32 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:36 IST" duration-ms="3302" status="PASS">
+        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@169e6180]" started-at="2026-03-26T23:27:53 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-03-26T23:27:55 IST" duration-ms="2462" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,7 +56,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[m13@g.com]]>
+                <![CDATA[kuga1@g.con]]>
               </value>
             </param>
             <param index="3">
@@ -81,319 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:36 IST" name="quit" finished-at="2026-02-16T09:18:36 IST" duration-ms="437" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:36 IST" name="launchBrowser" finished-at="2026-02-16T09:18:44 IST" duration-ms="8028" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:44 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:48 IST" duration-ms="3428" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[moorthy]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m13]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m14@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@6]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:48 IST" name="quit" finished-at="2026-02-16T09:18:48 IST" duration-ms="335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:48 IST" name="launchBrowser" finished-at="2026-02-16T09:18:55 IST" duration-ms="6852" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:55 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:18:58 IST" duration-ms="3120" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sanjay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m14]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m15@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@7]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:58 IST" name="quit" finished-at="2026-02-16T09:18:58 IST" duration-ms="376" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:18:58 IST" name="launchBrowser" finished-at="2026-02-16T09:19:02 IST" duration-ms="3701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:02 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:10 IST" duration-ms="7748" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[anand]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m15]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m16@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@8]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@8]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:10 IST" name="quit" finished-at="2026-02-16T09:19:10 IST" duration-ms="357" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:10 IST" name="launchBrowser" finished-at="2026-02-16T09:19:17 IST" duration-ms="6621" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:17 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:20 IST" duration-ms="3267" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[arasu]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m16]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m17@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@9]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@9]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:20 IST" name="quit" finished-at="2026-02-16T09:19:20 IST" duration-ms="530" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:20 IST" name="launchBrowser" finished-at="2026-02-16T09:19:28 IST" duration-ms="7151" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:28 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:31 IST" duration-ms="3390" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sudarshan]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m17]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m18@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@10]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@10]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:31 IST" name="quit" finished-at="2026-02-16T09:19:31 IST" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:31 IST" name="launchBrowser" finished-at="2026-02-16T09:19:40 IST" duration-ms="8134" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:40 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:43 IST" duration-ms="3512" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kalai]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m18]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m19@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@11]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@11]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:43 IST" name="quit" finished-at="2026-02-16T09:19:43 IST" duration-ms="346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:43 IST" name="launchBrowser" finished-at="2026-02-16T09:19:51 IST" duration-ms="7125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:51 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:19:55 IST" duration-ms="4785" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[suganya]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m19]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m20@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@12]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:55 IST" name="quit" finished-at="2026-02-16T09:19:56 IST" duration-ms="718" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:19:56 IST" name="launchBrowser" finished-at="2026-02-16T09:20:02 IST" duration-ms="5900" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="registerPageActions(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:20:02 IST" name="registerPageActions" data-provider="Exceldata" finished-at="2026-02-16T09:20:05 IST" duration-ms="3370" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kavi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[m20]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[m21@g.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Saibaba1@13]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Saibaba1@13]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPageActions -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@693fe6c9]" started-at="2026-02-16T09:20:05 IST" name="quit" finished-at="2026-02-16T09:20:07 IST" duration-ms="1435" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:testcases.RegisterPageTestCases@169e6180]" started-at="2026-03-26T23:27:55 IST" name="quit" finished-at="2026-03-26T23:27:56 IST" duration-ms="749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

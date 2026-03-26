@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import base.BaseClass;
 
 public class RegisterPageTest extends BaseClass {
+
+	String pageText;
 	private By registeLinkLocator = By.xpath("//div[@class='header-links']//ul/li/a[text()='Register']");
 
 	private String formInputs = "//div[@class='page-body']//div/div/input[@id='%s']";
@@ -25,9 +27,7 @@ public class RegisterPageTest extends BaseClass {
 
 	private By failureMessageLocator = By.xpath("//div[@class='message-error']//div/ul/li");
 
-	String actualSuccessMessage = null;
-
-	String actualFailureMessage = null;
+	String displayedMessage = null;
 
 	private void clickRegisterLink(By locator) {
 
@@ -80,21 +80,36 @@ public class RegisterPageTest extends BaseClass {
 
 	}
 
-	private void waitToElementVisible(By locator, WebDriver driver) {
+	private void waitToFailureMessage(By locator) {
 
-		checkVisibility(successMessageLocator, driver);
+		checkVisibility(locator);
 
 	}
 
-	private void waitToFailureMessage(By locator, WebDriver driver) {
+	private void waitToSuccessMessage(By locator) {
 
-		checkVisibility(failureMessageLocator, driver);
+		checkVisibility(locator);
 
 	}
 
 	private String getMessage(By locator) {
 
 		return getText(locator);
+
+	}
+
+	public String getMessageDisplayed() {
+
+		pageText = driver.getPageSource();
+
+		if (pageText.contains("Your registration completed")) {
+			waitToSuccessMessage(successMessageLocator);
+			displayedMessage = getMessage(successMessageLocator);
+		} else {
+			waitToFailureMessage(failureMessageLocator);
+			displayedMessage = getMessage(failureMessageLocator);
+		}
+		return displayedMessage;
 
 	}
 
@@ -110,18 +125,6 @@ public class RegisterPageTest extends BaseClass {
 		enterConfirmPassword(confirmPasswordLocator, confirmPassword);
 		clickRegisterButton(registerButtonLocator);
 
-	}
-
-	public String getSuccessMessage() {
-
-		waitToElementVisible(successMessageLocator, driver);
-		return actualSuccessMessage = getMessage(successMessageLocator);
-	}
-
-	public String getFailureMessage() {
-
-		waitToFailureMessage(failureMessageLocator, driver);
-		return actualFailureMessage = getMessage(failureMessageLocator);
 	}
 
 }

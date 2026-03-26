@@ -1,9 +1,10 @@
-package utils;
+package util;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -20,24 +21,17 @@ public class ExcelReader {
 	public static DataFormatter dataFormatter;
 	public static Object[][] data;
 
-	@DataProvider(name = "Exceldata")
-	public static Object[][] getTestData(java.lang.reflect.Method method) {
-		String sheetName = method.getName();
-		String filePath = System.getProperty("user.dir") + "\\testData\\demowebshop.xlsx";
+	public static Object[][] getTestData(String excelPath, String sheetName)
+			throws EncryptedDocumentException, IOException {
+
 		FileInputStream fis = null;
-		System.out.println(filePath);
 
 		try {
-			fis = new FileInputStream(filePath);
+			fis = new FileInputStream(excelPath);
+			book = WorkbookFactory.create(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		}
-		try {
-			book = WorkbookFactory.create(fis);
 
-			// have to pass the inputstream's object
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		sheet = book.getSheet(sheetName);
 
@@ -63,6 +57,8 @@ public class ExcelReader {
 			}
 		}
 
+		fis.close();
 		return data;
+
 	}
 }

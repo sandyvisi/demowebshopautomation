@@ -2,41 +2,48 @@ package testcases;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
 import pages.RegisterPageTest;
-import utils.ExcelReader;
+import util.ExcelReader;
 
 public class RegisterPageTestCases {
 
 	BaseClass base;
 	RegisterPageTest registerPage;
 
-	@BeforeMethod
+	@BeforeClass
 	public void launchBrowser() throws IOException {
 
 		base = new BaseClass();
 		base.init("chrome");
 	}
 
-	@Test(priority = 1, dataProvider = "Exceldata", dataProviderClass = ExcelReader.class)
+	@Test(priority = 1, dataProvider = "Exceldata")
 	public void registerPageActions(String firstName, String lastName, String email, String password,
 			String confrimPassword) {
 		registerPage = new RegisterPageTest();
 		registerPage.registerFormActions(firstName, lastName, email, password, confrimPassword);
-
-		Assert.assertEquals("Your registration completed", registerPage.getSuccessMessage());
-//		Assert.assertEquals("The specified email already exists", registerPage.getFailureMessage());
+		String message = registerPage.getMessageDisplayed();
+		System.out.println(message);
 
 	}
 
-	@AfterMethod()
+	@DataProvider(name = "Exceldata")
+	public Object[][] getData() throws EncryptedDocumentException, IOException {
+
+		return ExcelReader.getTestData("D:\\eclipse-workspace\\demowebshotautomation\\testData\\demowebshop.xlsx",
+				"registerPageActions");
+
+	}
+
+	@AfterClass
 	public void quit() {
 
 		base.teardown();

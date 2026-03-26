@@ -86,7 +86,7 @@ public class BaseClass {
 		return driver.findElements(locator);
 	}
 
-	public void checkVisibility(By locator, WebDriver driver) {
+	public void checkVisibility(By locator) {
 
 		expWait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		expWait.until(ExpectedConditions.visibilityOfElementLocated(locator));

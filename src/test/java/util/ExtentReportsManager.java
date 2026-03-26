@@ -1,4 +1,4 @@
-package utils;
+package util;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -19,11 +19,11 @@ import base.BaseClass;
 
 public class ExtentReportsManager extends BaseClass implements ITestListener {
 
-	private ExtentSparkReporter ui;
-	private ExtentReports commonInfo;
-	private ExtentTest testCaseEntries;
-	private Logger log;
-	private String timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+	public ExtentSparkReporter ui;
+	public ExtentReports commonInfo;
+	public ExtentTest testCaseEntries;
+	public Logger log;
+	public String timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
 
 	@Override
 	public void onStart(ITestContext context) {
@@ -65,8 +65,15 @@ public class ExtentReportsManager extends BaseClass implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+
+		if (testCaseEntries == null) {
+			testCaseEntries = commonInfo.createTest(result.getName());
+		}
 		testCaseEntries.log(Status.FAIL, "Test Failed: " + result.getName());
 		testCaseEntries.log(Status.FAIL, "Cause: " + result.getThrowable());
+		if (log == null) {
+			log = LoggerUtils.getLogger(result.getTestClass().getRealClass());
+		}
 		log.error("Test Failed: " + result.getName(), result.getThrowable());
 
 		String screenshotPath = ScreenshotUtility.getScreenshot(driver, result.getName());
