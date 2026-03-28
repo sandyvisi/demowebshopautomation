@@ -30,7 +30,7 @@ public class BaseClass {
 			+ "/src/main/java/config/config.properties";
 	protected JavascriptExecutor js;
 
-	// 1️⃣ Initialize driver
+	// 1️⃣ Initialize driver and 
 	public void init(String browser) throws IOException {
 
 		if ("chrome".equalsIgnoreCase(browser)) {
